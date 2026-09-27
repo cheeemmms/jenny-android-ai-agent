@@ -1,45 +1,45 @@
 {
   "nav": {
-    "chat": "Chat",
-    "apps": "Apps",
-    "workspace": "Workspace",
-    "settings": "Settings",
-    "wiki": "Wiki",
-    "onboarding": "Setup",
-    "ariaLabel": "Navigation"
+    "chat": "对话",
+    "apps": "应用",
+    "workspace": "工作区",
+    "settings": "设置",
+    "wiki": "知识库",
+    "onboarding": "初始设置",
+    "ariaLabel": "导航"
   },
   "chat": {
-    "placeholder": "Ask something…",
-    "error": "Error",
-    "attach": "Attach",
-    "wsError": "WebSocket not connected. Waiting for reconnection...",
-    "agentRunning": "Agent running",
-    "copy": "Copy",
-    "copied": "Copied!",
-    "copyFailed": "Copy failed",
-    "messageActions": "Message actions",
-    "copyPlain": "Copy text",
-    "copyMarkdown": "Copy as Markdown",
-    "close": "Close",
-    "filesModified": "{count} files modified",
+    "placeholder": "问点什么…",
+    "error": "错误",
+    "attach": "附件",
+    "wsError": "WebSocket 未连接，正在等待重连…",
+    "agentRunning": "智能体运行中",
+    "copy": "复制",
+    "copied": "已复制！",
+    "copyFailed": "复制失败",
+    "messageActions": "消息操作",
+    "copyPlain": "复制文本",
+    "copyMarkdown": "复制为 Markdown",
+    "close": "关闭",
+    "filesModified": "已修改 {count} 个文件",
     "jenny": "Jenny",
-    "online": "online",
-    "offline": "offline",
-    "showThinking": "Show thinking",
-    "openInEditor": "Open in editor",
-    "failedToLoad": "Failed to load",
-    "historyLoadFailed": "Could not load this conversation's history. It will retry on reconnect.",
-    "couldNotOpen": "Could not open {path}",
-    "unknown": "Unknown",
-    "fullAccess": "Full access",
-    "restricted": "Restricted",
-    "default": "Default",
-    "message": "Message",
-    "scrollToBottom": "Jump to bottom",
-    "newChat": "New chat",
-    "newChatConfirm": "Start a new chat? Jenny stops remembering everything said so far. The conversation is not deleted — scroll up to read it again.",
-    "newChatConfirmOk": "New chat",
-    "loadPrevious": "Show the previous conversation"
+    "online": "在线",
+    "offline": "离线",
+    "showThinking": "显示思考过程",
+    "openInEditor": "在编辑器中打开",
+    "failedToLoad": "加载失败",
+    "historyLoadFailed": "无法加载这段对话的历史记录，重连后会自动重试。",
+    "couldNotOpen": "无法打开 {path}",
+    "unknown": "未知",
+    "fullAccess": "完全访问",
+    "restricted": "受限",
+    "default": "默认",
+    "message": "消息",
+    "scrollToBottom": "跳到最新",
+    "newChat": "新对话",
+    "newChatConfirm": "开始新对话？Jenny 将不再记得此前说过的一切。对话不会被删除——向上滚动仍可重新查看。",
+    "newChatConfirmOk": "新对话",
+    "loadPrevious": "查看上一次对话"
   },
   "commands": {
     "label": "Commands",
@@ -149,16 +149,16 @@
     }
   },
   "session": {
-    "info": "Session Info",
-    "session": "Session",
-    "channel": "Channel",
-    "model": "Model",
-    "preset": "Preset",
-    "project": "Project",
-    "access": "Access",
-    "status": "Status",
-    "running": "Running",
-    "idle": "Idle"
+    "info": "会话信息",
+    "session": "会话",
+    "channel": "通道",
+    "model": "模型",
+    "preset": "预设",
+    "project": "项目",
+    "access": "访问权限",
+    "status": "状态",
+    "running": "运行中",
+    "idle": "空闲"
   },
   "settings": {
     "save": "Save",
@@ -466,20 +466,20 @@
     }
   },
   "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "cancel": "Cancel",
-    "close": "Close",
-    "genericError": "An error occurred. Check console.",
-    "networkError": "Network error. Retrying...",
-    "failedToLoadMode": "Failed to load {mode}",
-    "linkNotOpenable": "This link can't be opened from here",
-    "gatewayOffline": "Gateway unreachable: try again once the connection is back.",
-    "requestTimeout": "No answer from the gateway. Try again."
+    "loading": "加载中…",
+    "error": "错误",
+    "cancel": "取消",
+    "close": "关闭",
+    "genericError": "发生错误，请检查控制台。",
+    "networkError": "网络错误，正在重试…",
+    "failedToLoadMode": "无法加载 {mode}",
+    "linkNotOpenable": "无法从这里打开该链接",
+    "gatewayOffline": "无法连接到网关：请在连接恢复后重试。",
+    "requestTimeout": "网关没有响应，请重试。"
   },
   "dialog": {
-    "confirm": "Confirm",
-    "cancel": "Cancel"
+    "confirm": "确定",
+    "cancel": "取消"
   },
   "workspace": {
     "root": "workspace",
@@ -630,70 +630,70 @@
     "onlyThisProject": "This view only shows the {name} project."
   },
   "graph": {
-    "failedToLoad": "Failed to load graph",
-    "wikis": "Wikis",
-    "concepts": "Concepts",
-    "entities": "Entities",
-    "other": "Other",
-    "searchPlaceholder": "Search page contents…",
-    "searchClear": "Clear search"
+    "failedToLoad": "无法加载图谱",
+    "wikis": "知识库",
+    "concepts": "概念",
+    "entities": "实体",
+    "other": "其他",
+    "searchPlaceholder": "搜索页面内容…",
+    "searchClear": "清除搜索"
   },
   "header": {
-    "back": "Back",
-    "refresh": "Refresh",
-    "new": "New",
-    "audits": "Audits",
-    "files": "Files",
-    "graph": "Graph",
-    "pages": "Pages",
-    "openProjectChat": "Project chat",
-    "showHiddenApps": "Show hidden apps"
+    "back": "返回",
+    "refresh": "刷新",
+    "new": "新建",
+    "audits": "审阅",
+    "files": "文件",
+    "graph": "图谱",
+    "pages": "页面",
+    "openProjectChat": "项目对话",
+    "showHiddenApps": "显示已隐藏的应用"
   },
   "jenny": {
-    "closeMinichat": "Close minichat",
-    "askHere": "Ask here...",
-    "askJenny": "Ask Jenny",
-    "send": "Send",
-    "workingReply": "I'm still working on it… you'll find the rest in chat ✿",
-    "connectionError": "Cannot send: check your connection.",
-    "genericError": "Something went wrong.",
-    "codeTag": "[code]"
+    "closeMinichat": "关闭迷你对话",
+    "askHere": "在这里提问…",
+    "askJenny": "问 Jenny",
+    "send": "发送",
+    "workingReply": "我还在处理…剩下的内容在对话里 ✿",
+    "connectionError": "发送失败：请检查网络连接。",
+    "genericError": "出了点问题。",
+    "codeTag": "[代码]"
   },
   "themes": {
-    "placeholder": "Write to Jenny…",
+    "placeholder": "给 Jenny 发消息…",
     "chanel": {
-      "desc": "Black and white couture, a thread of gold only where it counts.",
-      "reply": "Luxury never raises its voice."
+      "desc": "黑白高定，金线只出现在关键处。",
+      "reply": "奢华从不喧哗。"
     },
     "synthwave": {
-      "desc": "Neon pink on violet night, every light leaves a trail.",
-      "reply": "Maximum character — for the fearless."
+      "desc": "紫夜里的霓虹粉，每道光都拖着尾巴。",
+      "reply": "个性拉满——给不怕的人。"
     },
     "kyoto": {
-      "desc": "Earth, rust and hand-rounded edges, like mended ceramics.",
-      "reply": "Quietness never asks for attention."
+      "desc": "陶土、锈色与手工修圆的边角，像修补过的陶器。",
+      "reply": "安静从不索取注视。"
     },
     "sticker": {
-      "desc": "Every message is a cut-out sticker: white border, hard shadow, imperfect rotation.",
-      "reply": "Chat like the back of a laptop."
+      "desc": "每条消息都是一张剪下来的贴纸：白边、硬阴影、歪得刚好。",
+      "reply": "像笔记本电脑背面那样聊天。"
     },
     "fumetto": {
-      "desc": "Ink on paper, hatching and speech bubbles: every reply is a comic panel.",
-      "reply": "Your chat is a page to read."
+      "desc": "纸上的墨线、排线和对话气泡：每次回复都是一格漫画。",
+      "reply": "你的对话是一页可读的漫画。"
     },
     "y2k": {
-      "desc": "Glossy gradients, bubblegum gloss, white borders.",
-      "reply": "The year 2000 as we promised ourselves."
+      "desc": "亮面渐变、泡泡糖光泽、白色描边。",
+      "reply": "我们说好的那个 2000 年。"
     },
     "pietra": {
-      "desc": "Travertine, bronze and Roman serifs, midday light.",
-      "reply": "Solid as a well-carved idea."
+      "desc": "洞石、青铜与罗马衬线，正午的光。",
+      "reply": "像雕刻得当的想法一样扎实。"
     }
   },
   "provider": {
     "openai": "OpenAI",
-    "anthropic": "Anthropic Compatible",
-    "unknown": "Unknown"
+    "anthropic": "Anthropic 兼容",
+    "unknown": "未知"
   },
   "backup": {
     "sectionTitle": "Backup & restore",
