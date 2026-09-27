@@ -1,0 +1,28 @@
+<resources>
+    <string name="gateway_notification_title">Jenny 正在运行</string>
+    <string name="gateway_notification_text">已就绪，可以回复并执行定时任务</string>
+    <string name="gateway_channel_name">后台服务</string>
+    <string name="gateway_channel_description">在 Jenny 于后台运行时显示。Android 要求必须有这条通知，它会一直保留到 Jenny 被停止。点按可打开 Jenny。</string>
+
+    <string name="alerts_channel_name">提醒</string>
+    <string name="alerts_channel_description">Jenny 主动发出的提醒和消息</string>
+
+    <string name="reply_action_label">回复</string>
+    <string name="reply_input_hint">给 Jenny 写消息…</string>
+    <string name="reply_failed_title">Jenny 没有收到你的消息</string>
+    <string name="reply_failed_text">她当时没有在运行。点按可重新发送。</string>
+    <string name="reply_retry_label">重新发送</string>
+    <string name="reply_user_name">你</string>
+
+    <string name="floating_input_hint">问 Jenny…</string>
+    <string name="floating_not_running">Jenny 现在没有在运行。</string>
+    <string name="floating_no_reply">没有回复。打开对话看看发生了什么。</string>
+    <string name="floating_send">发送</string>
+    <string name="floating_open_app">打开应用</string>
+    <string name="floating_continue_app">在应用里继续</string>
+
+    <string name="update_channel_name">应用更新</string>
+    <string name="update_channel_description">当已下载的更新需要你确认才能安装时显示</string>
+    <string name="update_notification_title">更新已就绪，可以安装</string>
+    <string name="update_notification_text">点按确认——之后 Jenny 会自行重启</string>
+</resources>

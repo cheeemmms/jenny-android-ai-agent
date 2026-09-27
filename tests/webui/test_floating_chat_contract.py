@@ -23,8 +23,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 CONTROLLER = ROOT / "android/app/src/main/java/com/flagdizero/jenny/FloatingOverlayController.kt"
-STRINGS_EN = ROOT / "android/app/src/main/res/values/strings.xml"
-STRINGS_IT = ROOT / "android/app/src/main/res/values-it/strings.xml"
+# Ogni cartella `values*/` che esiste davvero: una lingua nuova entra nei
+# controlli da sola, senza che nessuno debba ricordarsi di aggiungerla qui.
+STRINGS_FILES = sorted((ROOT / "android/app/src/main/res").glob("values*/strings.xml"))
 
 
 def _read() -> str:
@@ -161,8 +162,8 @@ class TestIlPassaggioAllApp:
         assert "R.string.floating_open_app" in body
         assert "R.string.floating_continue_app" in body
 
-    def test_le_stringhe_esistono_in_tutte_e_due_le_lingue(self):
-        for path in (STRINGS_EN, STRINGS_IT):
+    def test_le_stringhe_esistono_in_ogni_lingua(self):
+        for path in STRINGS_FILES:
             text = path.read_text(encoding="utf-8")
             for name in ("floating_open_app", "floating_continue_app"):
                 assert f'name="{name}"' in text, f"{name} manca in {path.name}"
