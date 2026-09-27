@@ -12,6 +12,7 @@ import re
 from pathlib import Path
 
 import pytest
+from support.i18n import LOCALES
 
 from jenny.snapshot.backup import IMPORT_STAGED_FILENAME
 from jenny.snapshot.locations import backup_staging_dir_for
@@ -93,7 +94,7 @@ def _i18n_keys_used() -> set[str]:
 def test_i18n_backup_keys_exist_in_both_locales() -> None:
     keys = _i18n_keys_used()
     assert keys, "nessuna chiave backup.* trovata nel JS: regex o file cambiati?"
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((UI_ASSETS / "i18n" / f"{locale}.json").read_text("utf-8"))
         for key in sorted(keys):
             node = data

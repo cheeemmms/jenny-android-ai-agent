@@ -30,6 +30,8 @@ import json
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "jenny" / "templates" / "ui" / "assets"
 CHAT_JS = ASSETS / "mobile-chat.js"
@@ -207,7 +209,7 @@ def test_the_wiki_still_recognises_the_class_the_server_emits() -> None:
 
 
 def test_both_locales_carry_the_inert_link_message() -> None:
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((I18N_DIR / f"{locale}.json").read_text(encoding="utf-8"))
         assert data["common"].get("linkNotOpenable"), f"chiave mancante in {locale}.json"
 

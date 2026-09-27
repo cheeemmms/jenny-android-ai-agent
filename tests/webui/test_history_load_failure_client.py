@@ -39,6 +39,7 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from support.i18n import LOCALES
 
 ASSETS = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui" / "assets"
 CHAT_JS = ASSETS / "mobile-chat.js"
@@ -436,7 +437,7 @@ def test_the_error_row_string_is_translated_in_both_locales() -> None:
     """Il test in node prova che il testo viene da ``i18n.t``; qui che la chiave
     che gli viene passata esista davvero — altrimenti a schermo finisce
     ``chat.historyLoadFailed``."""
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((I18N_DIR / f"{locale}.json").read_text(encoding="utf-8"))
         assert "historyLoadFailed" in data["chat"], f"chiave mancante in {locale}.json"
         assert data["chat"]["historyLoadFailed"].strip()

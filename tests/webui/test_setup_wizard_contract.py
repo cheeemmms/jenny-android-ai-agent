@@ -34,6 +34,8 @@ import json
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "jenny" / "templates" / "ui" / "assets"
 ONBOARDING_JS = ASSETS / "mobile-onboarding.js"
@@ -244,7 +246,7 @@ def test_the_new_strings_exist_in_both_locales() -> None:
         "rerunOnboardingAction",
         "rerunOnboardingConfirm",
     ]
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((I18N / f"{locale}.json").read_text(encoding="utf-8"))
         for key in keys:
             assert key in data["settings"], f"settings.{key} manca in {locale}.json"

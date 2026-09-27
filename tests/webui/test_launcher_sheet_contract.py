@@ -28,6 +28,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "jenny" / "templates" / "ui" / "assets"
 
@@ -522,7 +524,7 @@ def test_the_new_step_six_strings_exist_in_both_locales() -> None:
     i18n_dir = ASSETS / "i18n"
     expected = {"launcher.manage", "launcher.error", "launcher.loadFailed",
                 "launcher.retry", "apps.launchFailed"}
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((i18n_dir / f"{locale}.json").read_text(encoding="utf-8"))
         flat = {f"{a}.{b}" for a, group in data.items() if isinstance(group, dict)
                 for b in group}

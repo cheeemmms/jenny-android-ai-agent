@@ -25,6 +25,8 @@ import json
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "jenny" / "templates" / "ui" / "assets"
 APP_JS = ASSETS / "mobile-app.js"
@@ -403,6 +405,6 @@ def test_the_ssh_probe_shows_it_is_working_and_never_lands_elsewhere() -> None:
 
 
 def test_the_new_string_exists_in_both_locales() -> None:
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((ASSETS / "i18n" / f"{locale}.json").read_text(encoding="utf-8"))
         assert "verifyCancelled" in data["settings"]["ssh"], locale

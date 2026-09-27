@@ -15,6 +15,8 @@ import json
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 UI_ASSETS = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui" / "assets"
 
 
@@ -60,7 +62,7 @@ def test_settings_no_longer_offer_the_side_choice():
     settings = (UI_ASSETS / "mobile-settings.js").read_text("utf-8")
     assert "data-mascot-side" not in settings
     assert "setMascotSide" not in settings
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         keys = json.loads((UI_ASSETS / "i18n" / f"{locale}.json").read_text("utf-8"))["settings"]
         assert not [k for k in keys if k.startswith("mascotSide")], (
             f"stringhe della scelta del lato ancora in {locale}.json"

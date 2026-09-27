@@ -39,6 +39,7 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from support.i18n import LOCALES
 
 ASSETS = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui" / "assets"
 CHIP_JS = ASSETS / "shared" / "scope-chip.js"
@@ -512,7 +513,7 @@ def test_the_payload_the_route_builds_is_the_payload_the_chip_reads(tmp_path) ->
 
 def test_the_new_strings_exist_in_both_locales() -> None:
     """Grep, non comportamento: nessuna delle due lingue resta con la chiave."""
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         scope = _locale(locale)["scope"]
         for key in ("unopenableSection", "unopenableInvalidName", "unopenableOther"):
             assert key in scope, f"chiave scope.{key} mancante in {locale}.json"
@@ -532,7 +533,7 @@ def test_the_name_rule_is_not_copied_a_fourth_time() -> None:
     skill, e la `VALID_NAME` del client). La nota non ne aggiunge una quarta in
     prosa: interpola quella che c'è.
     """
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         scope = _locale(locale)["scope"]
         for key in ("unopenableInvalidName", "unopenableOther", "unopenableSection"):
             lowered = scope[key].lower()

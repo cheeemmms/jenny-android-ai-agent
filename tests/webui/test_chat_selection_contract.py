@@ -22,6 +22,8 @@ import re
 from html.parser import HTMLParser
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 ROOT = Path(__file__).resolve().parents[2]
 UI = ROOT / "jenny" / "templates" / "ui"
 ASSETS = UI / "assets"
@@ -166,7 +168,7 @@ def test_no_inline_handlers_were_added() -> None:
 
 def test_the_new_keys_exist_in_both_locales() -> None:
     keys = ("messageActions", "copyPlain", "copyMarkdown")
-    for lang in ("it", "en"):
+    for lang in LOCALES:
         chat = json.loads((ASSETS / "i18n" / f"{lang}.json").read_text(encoding="utf-8"))["chat"]
         for key in keys:
             assert chat.get(key), f"{lang}.chat.{key}"
@@ -180,6 +182,6 @@ def test_the_select_sheet_and_the_anchor_pin_are_gone() -> None:
     assert "_showSelectSheet" not in CHAT_JS
     assert "pinSelectionAnchor" not in SELECTION_JS and "pinSelectionAnchor" not in APP_JS
     assert "setBaseAndExtent" not in _code_only(SELECTION_JS), "nessuna scrittura della selezione da JS"
-    for lang in ("it", "en"):
+    for lang in LOCALES:
         chat = json.loads((ASSETS / "i18n" / f"{lang}.json").read_text(encoding="utf-8"))["chat"]
         assert "selectText" not in chat and "selectAll" not in chat, lang

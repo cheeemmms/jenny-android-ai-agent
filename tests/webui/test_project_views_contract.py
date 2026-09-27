@@ -46,6 +46,8 @@ import json
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 UI_DIR = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui"
 ASSETS = UI_DIR / "assets"
 WIKI_JS = ASSETS / "mobile-wiki.js"
@@ -188,7 +190,7 @@ def test_back_lands_somewhere_instead_of_refusing() -> None:
 
 
 def test_the_refusal_is_localised_in_both_languages() -> None:
-    for lang in ("it", "en"):
+    for lang in LOCALES:
         data = json.loads((ASSETS / "i18n" / f"{lang}.json").read_text(encoding="utf-8"))
         text = data["wiki"]["onlyThisProject"]
         assert "{name}" in text, f"{lang}: il rifiuto deve nominare il progetto"

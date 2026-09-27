@@ -29,6 +29,7 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from support.i18n import LOCALES
 
 ASSETS = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui" / "assets"
 CHIP_JS = ASSETS / "shared" / "scope-chip.js"
@@ -300,7 +301,7 @@ def test_the_menu_still_says_loading_before_the_first_answer() -> None:
 
 
 def test_the_note_string_is_translated_in_both_locales() -> None:
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((I18N_DIR / f"{locale}.json").read_text(encoding="utf-8"))
         assert "loadFailed" in data["scope"], f"chiave mancante in {locale}.json"
         assert data["scope"]["loadFailed"].strip()

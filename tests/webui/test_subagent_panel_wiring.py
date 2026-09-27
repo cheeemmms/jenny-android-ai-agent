@@ -14,6 +14,8 @@ import json
 import re
 from pathlib import Path
 
+from support.i18n import LOCALES
+
 UI_DIR = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui"
 CHAT_JS = UI_DIR / "assets" / "mobile-chat.js"
 DIALOG_JS = UI_DIR / "assets" / "shared" / "dialog.js"
@@ -560,7 +562,7 @@ def test_every_subagent_string_exists_in_both_locales() -> None:
         f"subagents.activity.{status}" for status in ("live", "paused", "frozen", "offline")
     }
     assert "subagents.activity.waiting" in used, "il test non sta leggendo le chiavi giuste"
-    for locale in ("en", "it"):
+    for locale in LOCALES:
         data = json.loads(
             (
                 Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui"

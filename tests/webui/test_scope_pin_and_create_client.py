@@ -52,6 +52,7 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from support.i18n import LOCALES
 
 ASSETS = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui" / "assets"
 CHIP_JS = ASSETS / "shared" / "scope-chip.js"
@@ -608,7 +609,7 @@ def test_every_key_the_map_names_exists_in_both_languages() -> None:
         "scope.nameTakenContinue",
         "scope.invalidName",
     }
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((ASSETS / "i18n" / f"{locale}.json").read_text(encoding="utf-8"))
         for key in sorted(keys):
             leaf = data
@@ -617,7 +618,7 @@ def test_every_key_the_map_names_exists_in_both_languages() -> None:
                 leaf = leaf[part]
             assert isinstance(leaf, str) and leaf.strip(), f"{locale}: {key} è vuota"
     # E il nome che l'utente ha scritto entra nelle due frasi che lo nominano.
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         data = json.loads((ASSETS / "i18n" / f"{locale}.json").read_text(encoding="utf-8"))
         for key in ("createRejected", "nameTaken"):
             assert "{name}" in data["scope"][key], f"{locale}: scope.{key} non nomina il progetto"

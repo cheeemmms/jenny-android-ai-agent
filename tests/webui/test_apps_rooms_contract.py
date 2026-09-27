@@ -26,9 +26,10 @@ Asserzioni sul sorgente, nello stile del resto di ``tests/webui/``.
 
 from __future__ import annotations
 
-import json
 import re
 from pathlib import Path
+
+from support.i18n import LOCALES, load_locale
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "jenny" / "templates" / "ui" / "assets"
@@ -416,12 +417,13 @@ def test_the_accordion_left_nothing_behind() -> None:
         assert dead not in css, f"{dead} è orfano e va tolto, non lasciato marcire"
     source = _src()
     assert "collapsedSections" not in source
-    it = json.loads((ASSETS / "i18n" / "it.json").read_text(encoding="utf-8"))
-    for dead_key in ("jennyApps", "skill", "androidApp", "active", "idle", "broken"):
-        assert dead_key not in it["apps"], (
-            f"apps.{dead_key} era l'etichetta della fisarmonica o del badge: "
-            "nessuno la chiede più"
-        )
+    for locale in LOCALES:
+        apps = load_locale(locale)["apps"]
+        for dead_key in ("jennyApps", "skill", "androidApp", "active", "idle", "broken"):
+            assert dead_key not in apps, (
+                f"{locale}: apps.{dead_key} era l'etichetta della fisarmonica o del "
+                "badge: nessuno la chiede più"
+            )
 
 
 def test_the_mascot_does_not_eat_taps_in_the_apps_tab() -> None:

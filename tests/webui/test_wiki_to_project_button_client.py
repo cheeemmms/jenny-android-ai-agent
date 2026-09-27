@@ -41,6 +41,7 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from support.i18n import LOCALES
 
 ASSETS = Path(__file__).resolve().parents[2] / "jenny" / "templates" / "ui" / "assets"
 HEADER_JS = ASSETS / "mobile-header.js"
@@ -394,7 +395,7 @@ def test_the_button_is_born_off_in_both_views() -> None:
 
 def test_the_button_label_exists_in_both_locales() -> None:
     """Una chiave a metà stampa `header.openProjectChat` sul bottone."""
-    for locale in ("it", "en"):
+    for locale in LOCALES:
         strings = json.loads((I18N / f"{locale}.json").read_text(encoding="utf-8"))
         label = strings.get("header", {}).get("openProjectChat")
         assert label, f"header.openProjectChat manca in {locale}.json"
