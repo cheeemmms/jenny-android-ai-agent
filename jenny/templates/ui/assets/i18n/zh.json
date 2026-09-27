@@ -42,46 +42,46 @@
     "loadPrevious": "查看上一次对话"
   },
   "commands": {
-    "label": "Commands",
-    "aria": "Show commands",
-    "loading": "Loading…",
-    "loadFailed": "Could not load the command list.",
-    "empty": "No commands available.",
+    "label": "命令",
+    "aria": "显示命令",
+    "loading": "加载中…",
+    "loadFailed": "无法加载命令列表。",
+    "empty": "没有可用的命令。",
     "new": {
-      "title": "New chat"
+      "title": "新对话"
     },
     "stop": {
-      "title": "Stop the current task"
+      "title": "停止当前任务"
     },
     "status": {
-      "title": "Runtime and provider status"
+      "title": "运行时与提供方状态"
     },
     "model": {
-      "title": "Show or switch the model"
+      "title": "查看或切换模型"
     },
     "history": {
-      "title": "Print the saved history"
+      "title": "打印已保存的历史记录"
     },
     "goal": {
-      "title": "Treat this as a long-running goal"
+      "title": "把它当作长期目标"
     },
     "dream": {
-      "title": "Consolidate memory now"
+      "title": "立即整理记忆"
     },
     "gardener": {
-      "title": "Turn the journal into pages"
+      "title": "把日记整理成页面"
     },
     "skill": {
-      "title": "List the enabled skills"
+      "title": "列出已启用的技能"
     },
     "tidy": {
-      "title": "Restructure this project's wiki"
+      "title": "重新整理本项目的知识库"
     },
     "init": {
-      "title": "Write this project's instructions"
+      "title": "写下本项目的说明"
     },
     "help": {
-      "title": "List every command"
+      "title": "列出所有命令"
     }
   },
   "subagents": {
@@ -482,63 +482,63 @@
     "cancel": "取消"
   },
   "workspace": {
-    "root": "workspace",
-    "save": "Save",
-    "saved": "Saved",
-    "newFile": "New file",
-    "newFolder": "New folder",
-    "rename": "Rename",
-    "clone": "Clone",
-    "delete": "Delete",
-    "download": "Download",
-    "new": "New",
-    "fileName": "File name:",
-    "folderName": "Folder name:",
-    "newName": "New name:",
-    "deleteConfirm": "Delete \"{name}\"?",
-    "saveConfirm": "Save changes to {path}?",
-    "discardConfirm": "You have unsaved changes. Close the editor and lose them?",
-    "failedToLoad": "Failed to load: ",
-    "error": "Error: ",
-    "binaryFile": "Binary file — download to view",
-    "openWithSystemApp": "Open with system app",
-    "share": "Share",
-    "saveToDownloads": "Save to Downloads",
-    "savedToDownloads": "Saved to Downloads",
-    "actionFailed": "Action failed",
-    "noFiles": "No Files",
-    "folderEmpty": "This folder is empty",
+    "root": "工作区",
+    "save": "保存",
+    "saved": "已保存",
+    "newFile": "新建文件",
+    "newFolder": "新建文件夹",
+    "rename": "重命名",
+    "clone": "复制一份",
+    "delete": "删除",
+    "download": "下载",
+    "new": "新建",
+    "fileName": "文件名：",
+    "folderName": "文件夹名：",
+    "newName": "新名称：",
+    "deleteConfirm": "删除“{name}”？",
+    "saveConfirm": "保存对 {path} 的修改？",
+    "discardConfirm": "有尚未保存的修改。关闭编辑器并丢弃它们吗？",
+    "failedToLoad": "加载失败：",
+    "error": "错误：",
+    "binaryFile": "二进制文件——下载后查看",
+    "openWithSystemApp": "用系统应用打开",
+    "share": "分享",
+    "saveToDownloads": "保存到“下载”",
+    "savedToDownloads": "已保存到“下载”",
+    "actionFailed": "操作失败",
+    "noFiles": "没有文件",
+    "folderEmpty": "这个文件夹是空的",
     "fileHelp": {
-      "open": "Open in the editor anyway",
-      "agents": "The working conventions of this workspace: project preferences and the ways of doing things that keep coming back. Sections show up as you agree them with Jenny; a heading with nothing under it does not belong here.\n\nNot here: facts about you (USER.md), personality and behaviour rules (SOUL.md), project context (memory/MEMORY.md), procedures with concrete steps and output formats (Skills, in the Apps section).",
-      "user": "What Jenny knows about you: identity, language, communication style, habits and interests. It fills in as she learns, so there is nothing to pre-write.\n\nNot here: project context (memory/MEMORY.md), behaviour rules (SOUL.md), repeatable procedures (Skills). Nor the time, the timezone or where you are: the runtime measures those on its own every turn, while a copy written here has nobody to refresh it and is out of date the moment it is saved.",
-      "soul": "Who Jenny is and how she behaves: her character, the way she talks, what she does and what she will never do. Plus the standing rules you have given her — how to address you, what to steer clear of, where to tread carefully.\n\nDream, the consolidation pass that runs after conversations, is what maintains it: a correction you make in passing ends up here. You can read it and fix it, but you rarely need to write here by hand.\n\nNot here: facts about you (USER.md), working conventions (AGENTS.md), repeatable procedures (Skills). Nor how the app itself behaves: what a tool accepts, what the sandbox refuses, where a limit sits — that is the same on every install, and the system prompt already tells her.",
-      "memory": "Long-term memory: what has to survive from one session to the next — project context, useful facts, notes worth keeping.\n\nDream, the consolidation pass that runs after conversations, is what maintains it. You can read it and correct it, but you rarely need to write here by hand.\n\nNot here: facts about you (USER.md), working conventions (AGENTS.md), repeatable procedures (Skills).",
-      "heartbeat": "The recurring checks Jenny goes through on every heartbeat.\n\nWrite them under \"## Active Tasks\": that is the only section that gets read. When a task is done, delete it instead of leaving it there — a list of finished work is re-read on every beat.\n\nNot here: one-off requests (just ask in chat) and repeatable procedures (Skills)."
+      "open": "仍然用编辑器打开",
+      "agents": "本工作区的工作约定：项目偏好，以及那些反复出现的做事方式。你与 Jenny 达成一致后，相应的章节就会出现；只有标题、下面空着的，不该放在这里。\n\n不该放这里：关于你的事实（USER.md）、性格与行为规则（SOUL.md）、项目背景（memory/MEMORY.md）、有具体步骤和输出格式的流程（技能，在“应用”里）。",
+      "user": "Jenny 对你的了解：身份、语言、沟通风格、习惯和兴趣。她会随着了解逐渐补全，所以不需要事先写什么。\n\n不该放这里：项目背景（memory/MEMORY.md）、行为规则（SOUL.md）、可重复的流程（技能）。也不要写时间、时区和你的位置：运行时每一轮都会自己重新测量，而写在这里的副本没有人去刷新，保存的那一刻就已经过期了。",
+      "soul": "Jenny 是谁、她如何行事：她的性格、说话方式、会做什么、绝不会做什么。再加上你给她定下的长期规则——怎么称呼你、要避开什么、哪些地方要小心。\n\n维护它的是 Dream，也就是对话之后运行的那个整理流程：你随口提出的一处纠正，最后会落到这里。你可以读它、改它，但很少需要你亲手写。\n\n不该放这里：关于你的事实（USER.md）、工作约定（AGENTS.md）、可重复的流程（技能）。也不要写应用本身的行为：某个工具接受什么、沙箱拒绝什么、某个上限在哪——这在每一台安装上都一样，系统提示词已经告诉她了。",
+      "memory": "长期记忆：必须从一个会话留到下一个会话的东西——项目背景、有用的事实、值得留存的笔记。\n\n维护它的是 Dream，也就是对话之后运行的那个整理流程。你可以读它、纠正它，但很少需要你亲手写。\n\n不该放这里：关于你的事实（USER.md）、工作约定（AGENTS.md）、可重复的流程（技能）。",
+      "heartbeat": "Jenny 每次心跳都要走一遍的周期性检查。\n\n把它们写在 \"## Active Tasks\" 下面：只有这一节会被读取。任务完成后就删掉，不要留在那里——已完成的清单会在每次心跳时被重新读一遍。\n\n不该放这里：一次性的请求（直接在对话里说）和可重复的流程（技能）。"
     },
-    "deleteProjectConfirm": "Delete the project “{name}”? The folder goes, and so does the conversation: they are two different things on disk, and this removes both.",
-    "deleteProjectConfirmWithChat": "Delete the project “{name}”? The folder goes, and the conversation with it: {count} messages.",
-    "deleteProjectFailed": "I could not delete the project “{name}”. Nothing was changed.",
-    "deletedProject": "Project “{name}” deleted, conversation included"
+    "deleteProjectConfirm": "删除项目“{name}”？文件夹会被删除，对话也一样：它们在磁盘上是两个不同的东西，而这一步会把两者都移除。",
+    "deleteProjectConfirmWithChat": "删除项目“{name}”？文件夹会连同对话一起消失：{count} 条消息。",
+    "deleteProjectFailed": "无法删除项目“{name}”。没有做任何改动。",
+    "deletedProject": "项目“{name}”已删除，对话也一并删除"
   },
   "launcher": {
-    "open": "Open apps",
-    "kindSkill": "Skill",
-    "kindJennyApp": "Jenny App",
-    "kindAndroidApp": "Android App",
-    "loading": "Loading...",
-    "empty": "No app, Jenny App or skill to open.",
-    "recent": "Most used",
-    "results": "Results",
-    "searchPlaceholder": "Search apps…",
-    "clearSearch": "Clear search",
-    "noResults": "No results for “{query}”.",
-    "hasServer": "Has its own server",
-    "resultsList": "Results",
-    "error": "Could not read the list of apps.",
-    "loadFailed": "Incomplete list: something did not answer.",
-    "retry": "Retry",
-    "manage": "Manage apps & skills"
+    "open": "打开应用",
+    "kindSkill": "技能",
+    "kindJennyApp": "Jenny 应用",
+    "kindAndroidApp": "Android 应用",
+    "loading": "加载中…",
+    "empty": "没有可打开的应用、Jenny 应用或技能。",
+    "recent": "最常用",
+    "results": "结果",
+    "searchPlaceholder": "搜索应用…",
+    "clearSearch": "清除搜索",
+    "noResults": "没有与“{query}”匹配的结果。",
+    "hasServer": "有自己的服务器",
+    "resultsList": "结果",
+    "error": "无法读取应用列表。",
+    "loadFailed": "列表不完整：有东西没有响应。",
+    "retry": "重试",
+    "manage": "管理应用与技能"
   },
   "apps": {
     "invalidManifest": "invalid manifest",
@@ -902,12 +902,12 @@
     "deleteProject": "Delete the project {name}"
   },
   "write": {
-    "write": "Writes",
-    "readonly": "Read-only",
-    "change": "Write or read-only",
-    "writeHint": "This chat can change files. Tap to switch to read-only.",
-    "readonlyHint": "This chat changes nothing on the device. Tap to allow writing again.",
-    "askReadonly": "Ask something (read-only)…",
-    "askAboutReadonly": "Ask about {name} (read-only)…"
+    "write": "可写",
+    "readonly": "只读",
+    "change": "可写或只读",
+    "writeHint": "这个对话可以修改文件。点击可切换到只读。",
+    "readonlyHint": "这个对话不会改动设备上的任何东西。点击可重新允许写入。",
+    "askReadonly": "问点什么（只读）…",
+    "askAboutReadonly": "关于 {name} 提问（只读）…"
   }
 }
